@@ -1,11 +1,16 @@
 import './App.css'
-import PhotosList from "./components/PhotosList.tsx";
+import Home from "./pages/Home/Home.tsx";
+import { Route, Routes } from "react-router-dom";
+import PhotoPage from "./pages/PhotoPage/PhotoPage.tsx";
 
 function App() {
   return (
-    <>
-      <PhotosList/>
-    </>
+    <main className='mainWrapper'>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="photo/:id" element={<PhotoPage/>}/>
+      </Routes>
+    </main>
   )
 }
 

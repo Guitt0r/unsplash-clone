@@ -6,7 +6,7 @@
   cursor: zoom-in;
 }
 
-.photoWrapper .mask {
+.mask {
   position: absolute;
   opacity: 0;
   width: 100%;
@@ -18,6 +18,25 @@
 
 .photoWrapper:hover .mask {
   opacity: 1;
+}
+
+.userInfo {
+  bottom: 15px;
+  left: 15px;
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.userInfo img {
+  border-radius: 99999px;
+}
+
+.userInfo span {
+  color: #dddddd;
 }
 
 .photo {

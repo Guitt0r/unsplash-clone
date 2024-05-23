@@ -53,28 +53,43 @@ export type User = {
     photos: string
     portfolio: string
     self: string
-    location: string
-    name: string
-    portfolio_url: string
-    profile_image: {
-      large: string
-      medium: string
-      small: string
-    }
-    social: {
-      instagram_username: string
-      paypal_email: string
-      portfolio_url: string
-      twitter_username: string
-    }
-    total_collections: number
-    total_illustrations: number
-    total_likes: number
-    total_photos: number
-    total_promoted_illustrations: number
-    total_promoted_photos: number
-    twitter_username: null
-    updated_at: string
-    username: string
   }
+  location: string
+  name: string
+  portfolio_url: string
+  profile_image: {
+    large: string
+    medium: string
+    small: string
+  }
+  social: {
+    instagram_username: string
+    paypal_email: string
+    portfolio_url: string
+    twitter_username: string
+  }
+  total_collections: number
+  total_illustrations: number
+  total_likes: number
+  total_photos: number
+  total_promoted_illustrations: number
+  total_promoted_photos: number
+  twitter_username: null
+  updated_at: string
+  username: string
+}
+
+export type DetailedPhoto = Photo & {
+  exif: {
+    name: string
+  },
+  tags: [
+    {
+      type: string,
+      title: string
+    }
+  ],
+  likes: number,
+  views: number,
+  downloads: number
 }

@@ -1,0 +1,98 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 5px;
+}
+
+.headerButtons > * {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.userInfo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+}
+
+.userInfo img {
+  border-radius: 9999px;
+}
+
+.photoWrapper {
+  width: 80%;
+  margin: 0 auto;
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+  display: flex;
+  justify-content: center;
+}
+
+.photoWrapper img {
+  width: auto;
+  max-height: 600px;
+  cursor: zoom-in;
+}
+
+.photoNumbers {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px
+}
+
+.photoNumbers .title {
+  color: #595959;
+  margin-bottom: 5px;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.photoInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.additionalInfo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 5px
+}
+
+.additionalInfoItem {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  color: #595959;
+}
+
+.tags {
+  display: flex;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.tag {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #cfcfcf;
+  color: #333333;
+  text-transform: capitalize;
+  transition: 100ms ease-in-out;
+}
+
+.tag:hover {
+  background-color: #b8b6b6;
+  cursor: pointer;
+}

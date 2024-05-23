@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Photo } from "../types.ts";
+import { DetailedPhoto, Photo } from "../types.ts";
 
 export const instance = axios.create({
   baseURL: 'https://api.unsplash.com',
@@ -9,8 +9,12 @@ export const instance = axios.create({
 })
 
 export const unsplashAPI = {
-  async getAllPhotos() {
-    const res = await instance.get<Photo[]>(`/photos`)
+  async getAllPhotos(page?: number) {
+    const res = await instance.get<Photo[]>(`/photos?page=${page}`);
+    return res.data
+  },
+  async getPhotoById(id: string) {
+    const res = await instance.get<DetailedPhoto>(`/photos/${id}`);
     return res.data
   }
 }
