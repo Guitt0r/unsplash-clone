@@ -17,7 +17,7 @@ const Header = ({ columns, setColumns, }: {
         <Link to='/'>
           <div className={s.logoWrapper}>
             <img src={logo} width={50} height={50} alt=""/>
-            Web-Gallery
+            Gallery
           </div>
         </Link>
         <SearchBar/>
