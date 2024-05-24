@@ -45,3 +45,8 @@
   scale: 1.01;
 }
 
+a{
+  color:inherit;
+  text-decoration: none;
+}
+

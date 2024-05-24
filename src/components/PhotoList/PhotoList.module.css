@@ -1,0 +1,45 @@
+.photoWrapper {
+  position: relative;
+}
+
+.photoWrapper:hover {
+  cursor: zoom-in;
+}
+
+.mask {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.1s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.photoWrapper:hover .mask {
+  opacity: 1;
+}
+
+.userInfo {
+  bottom: 15px;
+  left: 15px;
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.userInfo img {
+  border-radius: 99999px;
+}
+
+.userInfo span {
+  color: #dddddd;
+}
+
+.photo {
+  height: 100%;
+  width: 100%;
+}

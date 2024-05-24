@@ -1,0 +1,40 @@
+.inputGroup {
+  flex-grow: 1;
+  display: flex;
+  border-radius: 7px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border: 1px solid lightgray;
+  overflow: hidden;
+}
+
+.inputGroup input[type="search"] {
+  flex-grow: 1;
+  width: auto;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  @media (max-width: 550px) {
+    width: 100%;
+  }
+}
+
+.inputGroup input[type="search"]:focus {
+  outline: none;
+}
+
+.inputGroup input[type="search"]::placeholder {
+}
+
+.inputGroup img {
+  flex-shrink: 0;
+  max-width: 50px;
+  border-left: 1px solid lightgray;
+  cursor: pointer;
+  padding: 5px;
+  background-color: white;
+}
+
+.inputGroup img:hover {
+  opacity: 0.7;
+  transition: all 0.1s ease-in-out;
+}

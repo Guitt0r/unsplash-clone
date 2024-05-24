@@ -38,12 +38,21 @@
   width: auto;
   max-height: 600px;
   cursor: zoom-in;
+  object-fit: contain;
+  @media (max-width: 768px) {
+    width: 100%;
+    max-height: 100%;
+  }
 }
 
 .photoNumbers {
   margin-top: 20px;
   display: flex;
-  gap: 20px
+  gap: 20px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 5px;
+  }
 }
 
 .photoNumbers .title {
@@ -57,6 +66,9 @@
 }
 
 .photoInfo {
+  @media (max-width: 768px) {
+    align-items: baseline;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,11 +91,16 @@
 
 .tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
   margin: 10px 0;
 }
+.tags > a{
+  margin: 5px 0;
+}
 
 .tag {
+  white-space: nowrap;
   padding: 5px;
   border-radius: 5px;
   background-color: #cfcfcf;

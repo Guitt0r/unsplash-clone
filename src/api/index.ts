@@ -16,5 +16,21 @@ export const unsplashAPI = {
   async getPhotoById(id: string) {
     const res = await instance.get<DetailedPhoto>(`/photos/${id}`);
     return res.data
+  },
+  async searchPhotos(query: string, page?: number) {
+    const res = await instance.get<{
+      total: number,
+      total_pages: number,
+      results: Photo[]
+    }>(`/search/photos?query=${query}&page=${page}`);
+    return res.data
+  },
+  async searchCollections(query: string, page?: number) {
+    const res = await instance.get<{
+      total: number,
+      total_pages: number,
+      results: Photo[]
+    }>(`/search/collections/?query=${query}&page=${page}`)
+    return res.data
   }
 }

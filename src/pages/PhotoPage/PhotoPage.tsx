@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { unsplashAPI } from "../../api";
 import { DetailedPhoto } from "../../types.ts";
@@ -82,7 +82,9 @@ const PhotoPage = () => {
       </div>
       <div className={s.tags}>
         {photo.tags.map((tag, i) => (
-          <span className={s.tag} key={i}>{tag.title} </span>
+          <Link to={`/collection/${tag.title}`} key={i}>
+            <span className={s.tag}>{tag.title} </span>
+          </Link>
         ))}
       </div>
     </>
